@@ -1,6 +1,7 @@
 package models;
 
-import play.db.ebean.Model;
+
+import play.db.ebean.*;
 
 import javax.persistence.Entity;
 
@@ -34,4 +35,6 @@ public class User extends Model {
     public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
+
+    public static Finder<Long, User> find = new Finder<>(Long.class, User.class);
 }
