@@ -3,8 +3,11 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
-GET     /testPage                   controllers.TestPage.test()
+GET     /                                           controllers.Application.index()
+GET     /testPage                                   controllers.TestPage.test()
+GET     /post/:id                                   controllers.Application.showPost(id: Long)
+GET     /postByUser/$id<[0-9]+>                     controllers.Application.showPostByUser(id: Long)
+GET     /postByCompany/:id                          controllers.Application.showPostByCompany(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file                               controllers.Assets.at(path="/public", file)
