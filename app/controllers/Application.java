@@ -1,7 +1,5 @@
 package controllers;
 
-import com.avaje.ebean.ExpressionList;
-import com.avaje.ebean.OrderBy;
 import models.Post;
 import play.mvc.Controller;
 import play.mvc.Result;

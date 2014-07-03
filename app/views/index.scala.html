@@ -13,7 +13,7 @@
 
     <ul>
         @for(post <- posts) {
-            <li>@post.getTitle()</li>
+            <li><a href="@routes.Application.showPost(post.getId())">@post.getTitle()</a></li>
             <li>@post.getDate()</li>
             <p></p>
         }
