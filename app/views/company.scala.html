@@ -1,10 +1,10 @@
-@(posts: List[models.Post])
+@(company: models.Company)
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>All posts</title>
+    <title>A Company</title>
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
     <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
@@ -12,11 +12,10 @@
     <body>
 
     <ul>
-        @for(post <- posts) {
-            <li><a href="@routes.Post.showPost(post.getId())">@post.getTitle()</a></li>
-            <li>@post.getDate()</li>
-            <p></p>
-        }
+    <li>@company.getName()</li>
+    <li>Address : @company.getAddress()</li>
+    <li><a href="@routes.Post.showPostByCompany(company.getId())">all posts</a></li>
+    <p></p>
     </ul>
 
     </body>

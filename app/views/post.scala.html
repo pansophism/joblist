@@ -1,4 +1,4 @@
-@(post: Post)
+@(post: models.Post)
 
 <!DOCTYPE html>
 
@@ -15,6 +15,8 @@
     <li>@post.getTitle()</li>
     <li>Posted at @post.getDate()</li>
     <li>@post.getContent()</li>
+    <li><a href="@routes.Post.showPost(post.getId())">@post.getTitle()</a></li>
+    <li>@post.getCompanyId()</li>
     <p></p>
     </ul>
 
